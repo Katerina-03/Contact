@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Contact</string>
+    <string name="contacts_permission_required">No permission to read contacts</string>
+    <string name="no_contacts_found">No contacts found</string>
+
+    <plurals name="contacts_found">
+        <item quantity="one">Found %1$d contact</item>
+        <item quantity="other">Found %1$d contacts</item>
+    </plurals>
+</resources>
