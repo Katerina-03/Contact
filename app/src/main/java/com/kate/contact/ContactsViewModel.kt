@@ -47,11 +47,13 @@ private fun fetchContacts(context: Context): List<Contact> {
         val nameIndex = it.getColumnIndexOrThrow(Phone.DISPLAY_NAME)
         val numberIndex = it.getColumnIndexOrThrow(Phone.NUMBER)
         val result = ArrayList<Contact>()
+
         while (it.moveToNext()) {
             val number = it.getString(numberIndex) ?: continue
             val name = it.getString(nameIndex) ?: number
             result.add(Contact(name, number))
         }
+
         return result.sortedWith(
             compareBy(String.CASE_INSENSITIVE_ORDER) { c -> c.name }
         )
